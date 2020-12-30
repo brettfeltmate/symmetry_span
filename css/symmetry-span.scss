@@ -1,0 +1,149 @@
+$grue: rgb(90,90,96);
+$gray: rgb(223, 223, 220);
+$offset: 5px;
+
+body {
+  background-color: $grue;
+  font-size: 20pt;
+  color: $gray;
+  font-family: sans-serif;
+}
+
+.symmetry-span-layout {
+  display: grid;
+  height: 95vh;
+  width: 90vw;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 1fr 1fr;
+  grid-template-areas:
+          "prompt"
+          "stimulus-display"
+          "."
+          "button-bank";
+  place-items: center;
+  grid-row-gap: 5vh;
+}
+
+.symmetry-span-single-stim {
+  grid-area: stimulus-display;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  border: 5px solid $gray;
+  border-radius: 12pt;
+  padding: 10px;
+  height: 100%;
+  width: 70%;
+}
+
+.symmetry-span-click-grid {
+  display: grid;
+  grid-area: stimulus-display;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 2vh;
+  grid-column-gap: 2vw;
+  place-items: center;
+  border: 5px solid $gray;
+  border-radius: 12pt;
+  padding: 10px;
+  width: 70%;
+  height: 100%;
+
+}
+
+.symmetry-span-array-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "index img";
+  place-items: center;
+  margin: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.symmetry-span-array-item-index {
+  display: grid;
+  align-items: center;
+  justify-items: right;
+  grid-area: index;
+  width: 100%;
+  height: 100%;
+}
+
+.symmetry-span-array-item-image {
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+}
+
+
+.text-stim {
+  font-size: 30pt;
+  place-self: center;
+  line-height: 0.5em;
+}
+
+.image-stim {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.symmetry-span-button-bank {
+  display: flex;
+  grid-area: button-bank;
+  place-content: space-evenly;
+  margin: $offset;
+  width: 70%;
+  height: 100%;
+  border: 5px solid $gray;
+  border-radius: 12pt;
+  padding: 10px;
+}
+
+.symmetry-span-button {
+  place-self: center;
+  background-color: $gray;
+  border-radius: 12pt;
+  width: 25%;
+  height: 90%;
+  color: $grue;
+  font-size: 20pt;
+}
+.symmetry-span-button:hover {
+  background-color: $grue;
+  color: $gray;
+}
+
+.symmetry-span-overlay-text {
+  color: $grue;
+  -webkit-text-fill-color: $gray;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $grue;
+}
+
+.dev-lines {
+  border: 1px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
